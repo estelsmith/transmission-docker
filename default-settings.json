@@ -1,0 +1,17 @@
+{
+    "dht-enabled": false,
+    "download-dir": "/app/download",
+    "incomplete-dir": "/app/incomplete",
+    "incomplete-dir-enabled": true,
+    "lpd-enabled": false,
+    "message-level": 2,
+    "peer-port": 51413,
+    "peer-port-random-on-start": false,
+    "pex-enabled": false,
+    "port-forwarding-enabled": false,
+    "rpc-port": 9091,
+    "rpc-password": "",
+    "rpc-username": "",
+    "start-added-torrents": true,
+    "utp-enabled": false
+}

@@ -1,0 +1,4 @@
+{
+    "rpc-username": "${TRANSMISSION_RPC_USERNAME}",
+    "rpc-password": "${TRANSMISSION_RPC_PASSWORD}"
+}
