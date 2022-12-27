@@ -1,3 +1,5 @@
+# syntax=docker/dockerfile:1
+
 FROM registry.home.estelsmith.com/alpine:3.17
 
 RUN apk --no-cache add tini jq gettext transmission-cli transmission-daemon
