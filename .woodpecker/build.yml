@@ -18,5 +18,5 @@ pipeline:
                 $${REGISTRY_DOMAIN}
             - >
                 docker buildx build .
-                -t $${REGISTRY_DOMAIN}/jellyfin-docker:latest
+                -t $${REGISTRY_DOMAIN}/transmission-docker:latest
                 --output type=registry
