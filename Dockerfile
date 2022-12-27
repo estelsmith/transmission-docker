@@ -10,7 +10,7 @@ COPY default-slurp.json /default-slurp.json
 RUN adduser -s /sbin/nologin -h /app -H -D appuser
 
 RUN <<EOF
-  chmod 0700 /entrypoint.sh
+  chmod 0750 /entrypoint.sh
   for i in config torrents incomplete download; do
     mkdir -p "/app/${i}"
     chown appuser:appuser "/app/${i}"
