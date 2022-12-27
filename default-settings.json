@@ -9,6 +9,7 @@
     "peer-port-random-on-start": false,
     "pex-enabled": false,
     "port-forwarding-enabled": false,
+    "rpc-authentication-required": false,
     "rpc-port": 9091,
     "rpc-password": "",
     "rpc-username": "",
