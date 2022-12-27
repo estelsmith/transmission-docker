@@ -19,9 +19,10 @@ services:
         restart: unless-stopped
         user: "{{ app_user.uid }}:{{ app_user.group }}"
         volumes:
-            - ./data:/app/data
-            - ./cache:/app/cache
-            - ./library:/app/library
+            - ./config:/app/config
+            - ./torrents:/app/torrents
+            - ./incomplete:/app/incomplete
+            - ./downloads:/app/downloads
 
 networks:
     traefik:
