@@ -1,6 +1,6 @@
 {
     "dht-enabled": false,
-    "download-dir": "/app/download",
+    "download-dir": "/app/downloads",
     "incomplete-dir": "/app/incomplete",
     "incomplete-dir-enabled": true,
     "lpd-enabled": false,

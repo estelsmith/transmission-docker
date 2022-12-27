@@ -11,7 +11,7 @@ RUN adduser -s /sbin/nologin -h /app -H -D appuser
 
 RUN <<EOF
   chmod 0755 /entrypoint.sh
-  for i in config torrents incomplete download; do
+  for i in config torrents incomplete downloads; do
     mkdir -p "/app/${i}"
     chown appuser:appuser "/app/${i}"
   done
@@ -20,7 +20,10 @@ EOF
 VOLUME /app/config
 VOLUME /app/torrents
 VOLUME /app/incomplete
-VOLUME /app/download
+VOLUME /app/downloads
+
+EXPOSE 9091
+EXPOSE 51413
 
 USER appuser:appuser
 WORKDIR /app

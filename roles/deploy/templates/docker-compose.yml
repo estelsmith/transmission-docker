@@ -1,0 +1,28 @@
+version: "3.8"
+
+services:
+    server:
+        image: "{{ app_image }}"
+        environment:
+            TRANSMISSION_RPC_USERNAME: "test"
+            TRANSMISSION_RPC_PASSWORD: "test123"
+        labels:
+            traefik.enable: "true"
+            traefik.http.routers.{{ app_compose_traefik_service }}.entryPoints: tls
+            traefik.http.routers.{{ app_compose_traefik_service }}.rule: "Host(`{{ app_hostname }}`)"
+            traefik.http.routers.{{ app_compose_traefik_service }}.tls: "true"
+            traefik.http.services.{{ app_compose_traefik_service }}.loadbalancer.server.port: 9091
+        networks:
+            - traefik
+        ports:
+            - "51413:51413" #@TODO Proxy this through traefik
+        restart: unless-stopped
+        user: "{{ app_user.uid }}:{{ app_user.group }}"
+        volumes:
+            - ./data:/app/data
+            - ./cache:/app/cache
+            - ./library:/app/library
+
+networks:
+    traefik:
+        external: true

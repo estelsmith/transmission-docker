@@ -1,0 +1,7 @@
+app_root_dir: "/srv/transmission"
+app_system_user: "transmission"
+app_compose_project_name: "transmission"
+app_compose_traefik_service: "transmission"
+
+app_image: "registry.home.estelsmith.com/transmission-docker:latest"
+app_hostname: "transmission.home.estelsmith.com"
