@@ -4,6 +4,7 @@ services:
     server:
         image: "{{ app_image }}"
         environment:
+            TRANSMISSION_RPC_HOSTNAME: "{{ app_hostname }}"
             TRANSMISSION_RPC_USERNAME: "test"
             TRANSMISSION_RPC_PASSWORD: "test123"
         labels:

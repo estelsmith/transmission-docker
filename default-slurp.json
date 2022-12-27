@@ -1,4 +1,5 @@
 {
+    "rpc-host-whitelist": "${TRANSMISSION_RPC_HOSTNAME}",
     "rpc-username": "${TRANSMISSION_RPC_USERNAME}",
     "rpc-password": "${TRANSMISSION_RPC_PASSWORD}"
 }
