@@ -12,6 +12,7 @@
     "rpc-port": 9091,
     "rpc-password": "",
     "rpc-username": "",
+    "rpc-whitelist-enabled": false,
     "start-added-torrents": true,
     "utp-enabled": false
 }
